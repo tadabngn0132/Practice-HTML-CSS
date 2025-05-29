@@ -28,6 +28,7 @@
         .portfolio {
             display: flex;
             flex-direction: column;
+            min-height: 100vw;
         }
 
         /* CSS HEADER */
@@ -257,8 +258,10 @@
         .carousel-container {
             display: flex;
             align-self: center;
-            perspective: 1200px;
+            perspective: 100em;
+            perspective-origin: 0 -350px;
             width: 320px;
+            transform: translateY(100px);
             height: 400px;
         }
         
