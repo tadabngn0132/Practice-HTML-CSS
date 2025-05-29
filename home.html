@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('360_F_410629963_NN0Fl96u6yzgEHlrWifjQpqLjSG28jKM.jpg');
+            background-repeat: round;
+            background-size: cover;
+        }
+
+        /* CSS HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(4px);
+            padding: 0.5em 10em;
+            color: #fff;
+        }
+        .logo {
+            background-image: url('360_F_488099194_S41l188my3QP0S739qCFUqbq8ywKth21.jpg');
+            background-repeat: round;
+            background-size: cover;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+            animation: animate 10s linear infinite;
+        }
+        @keyframes animate {
+            to {
+                background-position-x: -200px;
+            }
+        }
+        .nav-items {
+            display: flex;
+            margin-right: 7.5em;
+        }
+        .item {
+            list-style-type: none;
+            font-size: 1.05em;
+            padding: 0.75em 1em;
+            border-radius: 1em;
+            cursor: pointer;
+            font-weight: normal;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-icon {
+            display: none;
+        }
+        .item:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            font-weight: bolder;
+            transform: scale(1.1) translateY(4px);
+            color: #8B5CF6;
+        }
+        .item:active {
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        .social-media {
+            display: flex;
+            color: inherit;
+        }
+        .social-media-item {
+            display: inline;
+            font-size: 1.5em;
+            padding: 0.25em;
+            margin-left: 0.75em;
+            color: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        .social-media-item:hover {
+            transform: scale(1.25) translateY(-4px);
+            color: #8B5CF6;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 2.5));
+        }
+
+        /* CSS HOME PAGE */
+        .home {
+            min-height: 40vw;
+            padding: 5em 10em;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img {
+            width: 17.5em;
+            height: 17.5em;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.25));
+            animation: slip-right 1.25s normal;
+        }
+        .overall-info {
+            display: flex;
+            flex-direction: column;
+            padding: 1.75em;
+            gap: 1em;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(4px);
+            animation: slip-left 1.25s normal;
+            border-radius: 1em;
+        }
+        .fullname {
+            animation: slip-down 1.25s normal;
+        }
+        .description {
+            list-style-type: none;
+            animation: slip-down 1.25s normal;
+        }
+        .quotes {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 35em;
+            animation: slip-up 1.25s normal;
+            /* color: #A7F3D0; */
+            color: #6EE7B7;
+        }
+        .quote-author {
+            align-self: flex-end;
+        }
+
+        @keyframes slip-right {
+            0% {
+                transform: translateX(200px) scale(0.6);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slip-left {
+            0% {
+                transform: translateX(-200px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slip-up {
+            0% {
+                transform: translateY(200px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slip-down {
+            0% {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 1240px) {
+            .header {
+                padding: 0.5em 1em;
+            }
+            .home {
+                padding: 7.5em 1em;
+            }
+        }
+
+        @media screen and (max-width: 970px) {
+            .home {
+                padding: 2.5em 1em;
+                flex-direction: column;
+                gap: 2.5em;
+            }
+            .nav-items {
+                margin-right: 5.5em;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .home {
+                padding: 2.5em 1em;
+                flex-direction: column;
+                gap: 2.5em;
+            }
+            
+            .logo {
+                font-size: 28px;
+            }
+
+            .nav-items {
+                margin-right: 6em;
+            }
+
+            .nav-text {
+                display: none;
+            }
+
+            .nav-icon {
+                font-size: 1em;
+                display: block;
+            }
+
+            .social-media-item {
+                font-size: 1.25em;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-items {
+                margin-right: 0;
+            }
+
+            .social-media-item {
+                margin: 0;
+            }
+
+            .quotes {
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio">
+        <div class="header">
+            <h1 class="logo">tadabngn0132</h1>
+            <nav class="header-nav">
+                <ul class="nav-items">
+                    <li class="item">
+                        <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="nav-text">Home</span> 
+                    </li>
+                    <li class="item">
+                        <span class="nav-icon"><i class="fa-solid fa-circle-info"></i></span>
+                        <span class="nav-text">About</span> 
+                    </li>
+                    <li class="item">
+                        <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
+                        <span class="nav-text">Projects</span> 
+                    </li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a class="social-media-item" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="social-media-item" href=""><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="home">
+            <img src="avt.jpg" alt="Avatar">
+            <div class="overall-info">
+                <h1 class="fullname">Nguyễn Bá Đạt</h1>
+                <ul class="descriptions">
+                    <li class="description">Sinh viên năm 3 ngành CNTT</li>
+                    <li class="description">Hướng đến fullstack web development</li>
+                    <li class="description">Ưa thích học qua dự án thực tế, tự tìm tòi</li>
+                </ul>
+                <div class="quotes">
+                    <p class="quote-title">"Học để biết, học để làm, học để chung sống, học để tự khẳng định mình."</p>
+                    <p class="quote-author">— UNESCO, Learning: The Treasure Within (1996)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
