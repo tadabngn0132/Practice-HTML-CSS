@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang giới thiệu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Portfolio - About</title>
 </head>
 <body>
     <header>
         <img src="assets/images/logo-removebg-preview.png" alt="Logo">
         <nav class="header-nav">
             <div class="nav-item">
-                <span class="item-icon"></span>
+                <span class="item-icon"><i class="fa-solid fa-house"></i></span>
                 <span class="item-text">Home</span>
             </div>
             <div class="nav-item">
-                <span class="item-icon"></span>
+                <span class="item-icon"><i class="fa-solid fa-circle-info"></i></span>
                 <span class="item-text">About</span>
             </div>
             <div class="nav-item">
-                <span class="item-icon"></span>
+                <span class="item-icon"><i class="fa-solid fa-folder-open"></i></span>
                 <span class="item-text">Projects</span>
             </div>
             <div class="nav-item">
-                <span class="item-icon"></span>
+                <span class="item-icon"><i class="fa-solid fa-blog"></i></span>
                 <span class="item-text">Blog</span>
             </div>
             <div class="nav-item">
-                <span class="item-icon"></span>
+                <span class="item-icon"><i class="fa-solid fa-phone"></i></span>
                 <span class="item-text">Contact</span>
             </div>
         </nav>
@@ -35,14 +36,15 @@
     <main>
         <div class="personal-infomation">
             <img src="assets/images/avt.jpg" alt="Avatar">
-            <div class="information">
-                <div class="fullname">Nguyễn Bá Đạt</div>
-                <div class="date-of-birth">23/10/2004</div>
-                <div class="place-of-origin">Hà Nội, Việt Nam</div>
-            </div>
+            <ul class="information">
+                <li class="fullname">Nguyễn Bá Đạt</li>
+                <li class="date-of-birth">23/10/2004</li>
+                <li class="place-of-origin">Hà Nội, Việt Nam</li>
+            </ul>
         </div>
 
         <div class="skills">
+            <span class="title">Kỹ năng</span>
             <label for="html">HTML</label>
             <progress id="html" value="68" max="100"></progress> 68% 
             <label for="css">CSS</label>
@@ -55,6 +57,14 @@
             <progress id="nodejs" value="33" max="100"></progress> 33% 
             <label for="git/github">Git/GitHub</label>
             <progress id="git/github" value="50" max="100"></progress> 50% 
+        </div>
+
+        <div class="experience">
+            <span class="title">Kinh nghiệm làm việc</span>
+            <span class="time">[5/2025 - 4/2026]</span>
+            <span class="exp-content">Làm đồ án tốt nghiệp</span>
+            <span class="time">[2026 - nay]</span>
+            <span class="exp-content">Thực tập tại ...</span>
         </div>
     </main>
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Portfolio - Blog</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo-removebg-preview.png" alt="Logo">
+        <nav class="header-nav">
+            <div class="nav-item">
+                <span class="item-icon"><i class="fa-solid fa-house"></i></span>
+                <span class="item-text">Home</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-icon"><i class="fa-solid fa-circle-info"></i></span>
+                <span class="item-text">About</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-icon"><i class="fa-solid fa-folder-open"></i></span>
+                <span class="item-text">Projects</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-icon"><i class="fa-solid fa-blog"></i></span>
+                <span class="item-text">Blog</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-icon"><i class="fa-solid fa-phone"></i></span>
+                <span class="item-text">Contact</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form action="" class="blog-form">
+            <label for="title">Tiêu đề</label>
+            <input type="text" placeholder="Học JavaScript từ con số 0">
+
+            <label for="description">Mô tả</label>
+            <textarea 
+            name="description" 
+            id="description" 
+            cols="30" 
+            rows="10" 
+            placeholder="Mình đã bắt đầu học JavaScript bằng cách..."></textarea>
+
+            <label for="created-time">Ngày đăng</label>
+            <input type="date" name="created-time" id="created-time">
+
+            <input type="submit" value="Thêm">
+        </form>
+
+        <ul class="blogs">
+            <li class="blog">
+                <span class="blog-item">Tựa đề: Học JavaScript từ con số 0</span>
+                <span class="blog-item">Mô tả: Mình đã bắt đầu học JavaScript bằng cách...</span>
+                <span class="blog-item">Ngày: 10/06/2025</span>
+            </li>
+        </ul>
+
+        <button>Xóa tất cả bài viết</button>
+    </main>
+</body>
+</html>
