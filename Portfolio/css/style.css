@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 1em;
+
+    position: relative;
+    z-index: 10000;
+}
+
+header .logo {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+header .header-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+header .header-nav .nav-item {
+    display: flex;
+    gap: 0.75em;
+    padding: 0.5em 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 450;
+}
+
